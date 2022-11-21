@@ -12,6 +12,7 @@ from sklearn import datasets
 
 
 def pregunta_01():
+    import pandas as pd
     from sklearn import datasets
     """
     Complete el código presentado a continuación.
