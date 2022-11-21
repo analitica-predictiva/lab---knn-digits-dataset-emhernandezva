@@ -69,23 +69,22 @@ def pregunta_03():
     """
 
     # Importe KNeighborsClassifier de sklearn.neighbors
-    from sklearn.neighbors import KNeighborsClassifier
+    from ____ import ____
 
     # Importe train_test_split de sklearn.model_selection
-    from sklearn.model_selection import train_test_split
+    from ____ import ____
 
     # Cargue el dataset digits
-    digits = datasets.load_digits()
+    digits = ____.____()
 
     # Cree los vectors de características y de salida
-    X = digits.data
-    y = digits.target
+    X = ____.____
+    y = ____.____
 
     # Divida los datos de entrenamiento y prueba. Los conjuntos de datos están
     # estratificados. La semilla del generador de números aleatorios es 42.
-    # El tamaño del test es del 20%
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42, stratify=y
+    X_train, X_test, y_train, y_test = ____(
+        ____, ____, test_size=____, random_state=____, stratify=____
     )
 
     # Inicialice los arreglos para almacenar la precisión para las muestras de
@@ -97,16 +96,16 @@ def pregunta_03():
     # Se itera sobre diferentes valores de vecinos
     for i, k in enumerate(neighbors):
         # Cree un clasificador con k vecinos
-        knn = KNeighborsClassifier(n_neighbors=k)
+        knn = ____
 
         # Entrene el clasificador con los datos de entrenamiento
-        knn.fit(X, y)
+        ____
 
         # Calcule la precisión para el conjunto de datos de entrenamiento
-        train_accuracy[i] = knn.score(X_train, y_train)
+        train_accuracy[i] = knn.score(____, ____)
 
         # Calcule la precisión para el conjunto de datos de prueba
-        test_accuracy[i] = knn.score(X_test, y_test)
+        test_accuracy[i] = knn.score(____, ____)
 
     # Almacenamiento de los resultados como un dataframe
     df = pd.DataFrame(
