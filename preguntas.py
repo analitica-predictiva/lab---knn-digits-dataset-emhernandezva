@@ -5,6 +5,10 @@ Clasificación usando k-NN - Digits Dataset
 En este laboratio se construirá un clasificador usando k-NN para el dataset de digitos.
 
 """
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from sklearn import datasets
 
 def pregunta_01():
     import pandas as pd
@@ -17,7 +21,7 @@ def pregunta_01():
     digits = datasets.load_digits()
 
     # Imprima los nombres de la variable target del dataset
-    print(digits.target)
+    print(digits.target_names)
 
     # Imprima las dimensinoes de matriz de datos
     print(digits.data.shape)
